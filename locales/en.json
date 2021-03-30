@@ -1,0 +1,76 @@
+{
+  "header": {
+    "Grants": "Grants",
+    "Technology": "Technology",
+    "Projects": "Projects",
+    "En": "En",
+    "Zh": "中文",
+    "CrustNetwork": "Crust Network"
+  },
+  "home": {
+    "title": "Decentralized Cloud Foundation",
+    "subtitle": "A non-profit organization aiming to connect people into decentralized cloud of Web3.0"
+  },
+  "description": {
+    "program": {
+      "title": "Crust Grants Program",
+      "content": "DCF has funded the decentralized storage project Crust Network and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation."
+    },
+    "stack": {
+      "title": "Decentralized Cloud Storage Stack",
+      "content": "You effectively enhance the value of the decentralized cloud by working on the following layers."
+    }
+  },
+  "apply": {
+    "title": "Application",
+    "content": "This program offers funding up to $30,000 for each recipient. In addition, it includes necessary technical and resource support to accelerate your project.",
+    "applyNow": "Apply now"
+  },
+  "application": {
+    "L3": {
+      "title": "L3 <br> Application Layer",
+      "userBasedApplications": {
+        "title": "User Based Applications",
+        "NFT": "NFT",
+        "contentStorageDelivery": "Content Storage&Delivery",
+        "cloudStorage": "Website Hosting Tools"
+      },
+      "blockchainBasedApplications": {
+        "title": "Blockchain Based Applications",
+        "explorers": "Explorers",
+        "wallets": "Wallets"
+      }
+    },
+    "L2": {
+      "title": "L2 <br> API Layer",
+      "developmentTools": {
+        "title": "Development Tools",
+        "multiLanguageSDKs": "Multi-Language SDKs",
+        "APIDocuments": "API Documents"
+      }
+    },
+    "L1": {
+      "title": "L1 <br> Strategy Layer",
+      "strategy": {
+        "title": "Strategies",
+        "storageManagement": "Storage Management",
+        "diskManagement": "Disk Management"
+      }
+    },
+    "L0": {
+      "title": "L0 <br> Protocol Layer",
+      "fileSystems": {
+        "title": "File Systems",
+        "IPFS": "IPFS",
+        "bitTorrent": "BT"
+      },
+      "chainProtocols": {
+        "title": "Chain Protocols",
+        "MPoW": "MPoW",
+        "GPoS": "GPoS",
+        "decentralizedStorageMarket": "DSM"
+      }
+    },
+    "seeEligibleProjects": "See Eligible Projects"
+  }
+}
