@@ -40,7 +40,7 @@ export default {
       padding-left: calc((100% - 1350px) / 3.8);
 
       p {
-        font-size: 88px;
+        font-size: 86px;
         font-weight: bold;
         color: white;
         line-height: 240px;
