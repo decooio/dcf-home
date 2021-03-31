@@ -198,7 +198,6 @@ export default {
       .application-container-col-left {
         padding-top: 11px;
         font-size: 30px;
-        font-family: PingFang SC;
         font-weight: bold;
         color: #222222;
         line-height: 48px;
@@ -215,7 +214,6 @@ export default {
         padding: 0px 30px 30px 30px;
         .application-container-col-right-title {
           font-size: 30px;
-          font-family: PingFang SC;
           font-weight: bold;
           color: #222222;
           line-height: 28px;
@@ -229,7 +227,6 @@ export default {
             background: #ffffff;
             border: 1px solid rgba(31, 31, 31, 0.6);
             font-size: 24px;
-            font-family: PingFang SC;
             font-weight: bold;
             color: #222222;
             line-height: 24px;
@@ -238,6 +235,7 @@ export default {
             &:hover {
               background: #2dacd1;
               color: white;
+              border: none;
             }
           }
         }

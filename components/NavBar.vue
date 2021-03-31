@@ -67,11 +67,11 @@ export default {
           children: ["CrustNetwork"],
         },
 
-        {
-          name: "Locales",
-          hasChild: true,
-          children: ["En", "Zh"],
-        },
+        // {
+        //   name: "Locales",
+        //   hasChild: true,
+        //   children: ["En", "Zh"],
+        // },
       ],
     }
   },
@@ -125,7 +125,6 @@ export default {
 .header {
   /deep/ .nav-link {
     font-size: 24px;
-    font-family: PingFang SC;
     font-weight: bold;
     color: white;
     line-height: 60px;
@@ -160,7 +159,6 @@ export default {
     padding: 0 55px 0 85px;
     .navbar-nav {
       font-size: 24px;
-      font-family: PingFang SC;
       font-weight: bold;
       color: white;
       .nav-item {

@@ -37,7 +37,6 @@ export default {
   border: 1px solid rgba(31, 31, 31, 0.6);
   padding: 0 43px 0 43px;
   font-size: 24px;
-  font-family: PingFang SC;
   font-weight: bold;
   cursor: pointer;
   color: $color-black;
@@ -47,6 +46,7 @@ export default {
     background: #2dacd1;
     color: white;
     fill: white;
+    border: none;
   }
 
   .custom-button-arrow {

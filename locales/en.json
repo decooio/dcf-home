@@ -23,7 +23,7 @@
   },
   "apply": {
     "title": "Application",
-    "content": "This program offers funding up to $30,000 for each recipient. In addition, it includes necessary technical and resource support to accelerate your project.",
+    "content": "Apply for Crust Grants and join us for building the Web 3.0 decentralized cloud ecosystem.",
     "applyNow": "Apply now"
   },
   "application": {
@@ -62,13 +62,13 @@
       "fileSystems": {
         "title": "File Systems",
         "IPFS": "IPFS",
-        "bitTorrent": "BT"
+        "bitTorrent": "BitTorrent"
       },
       "chainProtocols": {
         "title": "Chain Protocols",
         "MPoW": "MPoW",
         "GPoS": "GPoS",
-        "decentralizedStorageMarket": "DSM"
+        "decentralizedStorageMarket": "Decentralized Storage Market (DSM)"
       }
     },
     "seeEligibleProjects": "See Eligible Projects"

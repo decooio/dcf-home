@@ -49,7 +49,6 @@ export default {
     color: $color-black;
     .apply-container-title {
       font-size: 48px;
-      font-family: PingFang SC;
       font-weight: bold;
       line-height: 48px;
       margin-bottom: 60px;
@@ -57,7 +56,6 @@ export default {
 
     .apply-container-subtitle {
       font-size: 36px;
-      font-family: PingFang SC;
       font-weight: bold;
       line-height: 48px;
       padding-bottom: 80px;

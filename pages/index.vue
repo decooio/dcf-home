@@ -15,5 +15,6 @@ export default {
 <style lang="scss" scoped>
 .main {
   min-width: 1440px;
+  font-family: "Ping Fang SC", "Microsoft YaHei";
 }
 </style>

@@ -41,7 +41,6 @@ export default {
 
       p {
         font-size: 88px;
-        font-family: PingFang SC;
         font-weight: bold;
         color: white;
         line-height: 240px;
@@ -50,7 +49,6 @@ export default {
     .index-container-subtitle {
       margin-top: 43px;
       font-size: 36px;
-      font-family: PingFang SC;
       font-weight: bold;
       color: white;
       line-height: 48px;

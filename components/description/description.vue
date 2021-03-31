@@ -46,14 +46,12 @@ export default {
     .description-container-title {
       font-size: 48px;
       line-height: 48px;
-      font-family: PingFang SC;
       font-weight: bold;
       margin-bottom: 65px;
     }
 
     .description-container-subtitle {
       font-size: 36px;
-      font-family: PingFang SC;
       font-weight: bold;
       line-height: 48px;
     }
