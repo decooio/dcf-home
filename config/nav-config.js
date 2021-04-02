@@ -13,7 +13,7 @@ const innerList = [
 // }
 const outerDit = {
   eligible:
-    "https://github.com/crustid/Crust-Grants-Program/blob/main/crust_stack.md",
+    "https://github.com/crustio/Crust-Grants-Program/blob/main/crust_stack.md",
   apply: "https://github.com/crustio/Crust-Grants-Program",
   CrustNetwork: "https://crust.network",
 }

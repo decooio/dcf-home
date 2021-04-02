@@ -80,4 +80,18 @@ html {
 nav-bar {
   position: absolute;
 }
+
+@media only screen and (max-width: 640px) { html, body { font-size: 32px; } }
+/* for 540 px width screen */
+@media only screen and (max-width: 540px) { html, body { font-size: 27px; } }
+/* for 480 px width screen */
+@media only screen and (max-width: 480px) { html, body { font-size: 24px; } }
+/* for 450 px width screen */
+@media only screen and (max-width: 450px) { html, body { font-size: 22.5px; } }
+/* for 414 px width screen */
+@media only screen and (max-width: 414px) { html, body { font-size: 20.7px; } }
+/* for 375 px width screen */
+@media only screen and (max-width: 375px) { html, body { font-size: 18.75px; } }
+/* for 320 px width screen */
+@media only screen and (max-width: 320px) { html, body { font-size: 16px; } }
 </style>
