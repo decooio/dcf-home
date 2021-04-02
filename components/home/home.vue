@@ -21,11 +21,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@media (min-width: 600px) and (max-width: 1440px) {
+  .index {
+    height: 133.33vh;
+  }
+}
+
+@media (min-width: 1440px) {
+  .index {
+    height: 100vh;
+  }
+}
+
 @media (min-width: 600px) {
   .index {
     background: url("~/assets/images/back-1.png");
     width: 100%;
-    height: 100vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
