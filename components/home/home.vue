@@ -67,7 +67,7 @@ export default {
         font-weight: bold;
         color: white;
         line-height: 48px;
-        max-width: 1070px;
+        max-width: 1200px;
         padding-left: calc((100% - 1350px) / 3.8);
       }
     }
