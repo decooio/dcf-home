@@ -25,11 +25,6 @@ export default {
   .index {
     height: 133.33vh;
   }
-  <!if safari_webkit>
-  .index {
-    height: 100vh;
-  }
-  <![endif]>
 }
 
 @media (min-width: 1441px) {
