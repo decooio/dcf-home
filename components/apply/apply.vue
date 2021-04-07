@@ -40,6 +40,7 @@ export default {
     height: 1030px - 155px;
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100% 50%;
     .apply-container {
       max-width: 1280px;
       height: 700px;

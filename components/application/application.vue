@@ -163,6 +163,7 @@ export default {
     height: 1460px;
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100%;
     position: relative;
     top: -155px;
     .application-container {
@@ -307,7 +308,7 @@ export default {
               &:hover {
                 background: #2dacd1;
                 color: white;
-                border: none;
+                border: 1px solid transparent;
               }
             }
           }

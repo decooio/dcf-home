@@ -33,6 +33,7 @@ export default {
     height: 1080px;
     background-repeat: no-repeat;
     background-position: bottom;
+    background-size: 100% 50%;
     .description-container {
       padding-top: 127px;
       max-width: 1280px;
