@@ -1,0 +1,76 @@
+{
+  "header": {
+    "Grants": "Grants",
+    "Technology": "技术",
+    "Projects": "项目",
+    "En": "En",
+    "Zh": "中文",
+    "CrustNetwork": "Crust Network"
+  },
+  "home": {
+    "title": "去中心化云基金会",
+    "subtitle": "DCF是一家非营利性组织，旨在打造一个Web 3.0去中心化云生态"
+  },
+  "description": {
+    "program": {
+      "title": "Crust Grants",
+      "content": "DCF孵化了去中心化存储网络 - Crust Network，并将继续资助和孵化致力于为去中心化云增强用户体验、商业价值及技术创新的项目。"
+    },
+    "stack": {
+      "title": "去中心化云存储技术栈",
+      "content": "你可以通过以下方面的技术贡献，为去中心化云提供巨大的价值。"
+    }
+  },
+  "apply": {
+    "title": "应用",
+    "content": "Crust Grants 为开发者提供最高3万美金开发资助。此外，Grants委员会也会提供必要的技术支持来加速项目的推进。",
+    "applyNow": "即刻申请"
+  },
+  "application": {
+    "L3": {
+      "title": "L3 <br> 应用层",
+      "userBasedApplications": {
+        "title": "应用（基于用户）",
+        "NFT": "NFT",
+        "contentStorageDelivery": "内容存储及分发",
+        "cloudStorage": "网站部署工具"
+      },
+      "blockchainBasedApplications": {
+        "title": "应用（基于链）",
+        "explorers": "浏览器",
+        "wallets": "钱包"
+      }
+    },
+    "L2": {
+      "title": "L2 <br> 应用程序接口层",
+      "developmentTools": {
+        "title": "开发工具",
+        "multiLanguageSDKs": "多种语言的SDK",
+        "APIDocuments": "API文档"
+      }
+    },
+    "L1": {
+      "title": "L1 <br> 策略层",
+      "strategy": {
+        "title": "节点策略",
+        "storageManagement": "节点存储管理策略",
+        "diskManagement": "硬盘运维管理策略"
+      }
+    },
+    "L0": {
+      "title": "L0 <br> 协议层",
+      "fileSystems": {
+        "title": "文件系统",
+        "IPFS": "IPFS",
+        "bitTorrent": "BT"
+      },
+      "chainProtocols": {
+        "title": "区块链协议",
+        "MPoW": "MPoW",
+        "GPoS": "GPoS",
+        "decentralizedStorageMarket": "去中心化存储市场"
+      }
+    },
+    "seeEligibleProjects": "查看满足条件的项目"
+  }
+}
