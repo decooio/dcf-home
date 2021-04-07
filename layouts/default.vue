@@ -53,7 +53,7 @@ nav-bar {
   position: absolute;
 }
 
-@media only screen and (max-width: 1440px) and (min-width: 640px){
+@media only screen and (max-width: 1600px) and (min-width: 640px){
   body { zoom: 0.75}
 }
 @media only screen and (max-width: 640px) { html, body { font-size: 32px; } }

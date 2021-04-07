@@ -21,13 +21,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@media (min-width: 600px) and (max-width: 1440px) {
+@media (min-width: 600px) and (max-width: 1600px) {
   .index {
     height: 133.33vh;
   }
 }
 
-@media (min-width: 1441px) {
+@media (min-width: 1601px) {
   .index {
     height: 100vh;
   }
