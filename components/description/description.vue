@@ -1,12 +1,10 @@
 <template>
   <div class="description">
-    <div class="description-container">
+    <div class="description-container padding-top-90">
       <div class="description-container-title">
         {{ $t("description.program.title") }}
       </div>
-      <div class="description-container-subtitle">
-        {{ $t("description.program.content") }}
-      </div>
+      <div class="description-container-subtitle" v-html="$t('description.program.content')"></div>
     </div>
     <div class="description-container color-white description-background">
       <div class="description-container-title">
@@ -57,6 +55,10 @@ export default {
         line-height: 48px;
       }
 
+    }
+
+    .padding-top-90 {
+      padding-top: 90px;
     }
   }
 }

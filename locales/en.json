@@ -14,7 +14,7 @@
   "description": {
     "program": {
       "title": "Crust Grants Program",
-      "content": "DCF has funded the decentralized storage project Crust Network and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation."
+      "content": "DCF has funded the decentralized storage project Crust Network and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation. Crust Grants Program is <span style='color: #2dacd1'>application</span>-oriented, currently it only supports <span style='color: #2dacd1'>software</span> development projects."
     },
     "stack": {
       "title": "Decentralized Cloud Storage Stack",
