@@ -1,0 +1,10 @@
+{
+  "name": "dcf-home",
+  "short_name": "dcf-home",
+  "description": "The home page of DCF.",
+  "icons": [],
+  "start_url": "/?standalone=true",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "lang": "en"
+}
