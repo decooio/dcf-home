@@ -24,7 +24,7 @@ jobs:
         with:
           cmd: generate
 
-      - name: Deploy to namek-network/dcf-home-deploy
+      - name: Deploy to def-home/main-deploy
         uses: hpcodecraft/action-deploy-workspace-to-repo@v2.2
         env:
           GITHUB_ACCESS_TOKEN: ${{ secrets.DECOO_PAT }}
