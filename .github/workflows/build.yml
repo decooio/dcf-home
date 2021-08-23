@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v1
         with:
-          token: ${{ secrets.GAVFU_PAT }}
+          token: ${{ secrets.DECOO_PAT }}
 
       - name: Install dependencies
         uses: Borales/actions-yarn@v2.3.0
@@ -27,9 +27,9 @@ jobs:
       - name: Deploy to namek-network/dcf-home-deploy
         uses: hpcodecraft/action-deploy-workspace-to-repo@v2.2
         env:
-          GITHUB_ACCESS_TOKEN: ${{ secrets.GAVFU_PAT }}
+          GITHUB_ACCESS_TOKEN: ${{ secrets.DECOO_PAT }}
           SRC_FOLDER: dist
-          DEST_OWNER: namek-network
-          DEST_REPO: dcf-home-deploy
-          DEST_BRANCH: main
+          DEST_OWNER: decooio
+          DEST_REPO: dcf-home
+          DEST_BRANCH: main-deploy
           DEST_FOLDER: docs

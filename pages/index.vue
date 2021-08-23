@@ -3,18 +3,25 @@
     <home />
     <description />
     <application />
-    <apply />
+    <support-program />
+    <dev-program />
+    <about />
+    <main-footer />
   </div>
 </template>
 <script>
 import VueScrollTo from "vue-scrollto"
+import SupportProgram from "../components/SupportProgram"
+import DevProgram from "../components/DevProgram"
+import About from "../components/About"
+import MainFooter from "../components/Footer"
 export default {
-  components: {},
+  components: { MainFooter, About, DevProgram, SupportProgram },
   mounted() {
-    if(this.$route.query.scrollto === "description") {
+    if (this.$route.query.scrollto === "description") {
       VueScrollTo.scrollTo(document.querySelector(".description"))
     }
-  }
+  },
 }
 </script>
 
@@ -29,6 +36,8 @@ export default {
     min-width: initial;
     font-family: "PingFang SC", "Microsoft YaHei";
     font-size: medium;
+    width: 100%;
+    overflow: hidden;
   }
 }
 </style>

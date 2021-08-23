@@ -17,18 +17,20 @@
           >
         </template>
       </b-dropdown>
-      <div class="header-button"
+      <div
         v-else
+        :key="'head-' + item.name"
+        class="header-button"
         @click="jump(item.name)"
-      >{{ $t(`header.${item.name}`) }}</div>
+      >
+        {{ $t(`header.${item.name}`) }}
+      </div>
     </template>
-
   </div>
 </template>
 
 <script>
-import VueScrollTo from "vue-scrollto"
-import jumpTo from "../utils"
+import utils from "../utils"
 
 export default {
   data() {
@@ -36,18 +38,26 @@ export default {
       activeNav: "home",
       navList: [
         {
-          name: "Grants",
+          name: "Initiatives",
           hasChild: false,
         },
         {
-          name: "Technology",
+          name: "Technologies",
           hasChild: false,
         },
         {
-          name: "Projects",
-          hasChild: true,
-          children: ["CrustNetwork"],
+          name: "SupportProgram",
+          hasChild: false,
         },
+        {
+          name: "About",
+          hasChild: false,
+        },
+        // {
+        //   name: "Projects",
+        //   hasChild: true,
+        //   children: ["CrustNetwork"],
+        // },
 
         // {
         //   name: "Locales",
@@ -83,14 +93,20 @@ export default {
         case "En":
           this.setLocale("en")
           break
-        case "Grants":
-          VueScrollTo.scrollTo(document.querySelector(".description"))
+        case "Initiatives":
+          utils.scrollIntoView(".description")
           break
-        case "Technology":
-          VueScrollTo.scrollTo(document.querySelector(".application"))
+        case "Technologies":
+          utils.scrollIntoView(".application")
+          break
+        case "SupportProgram":
+          utils.scrollIntoView(".support-program")
+          break
+        case "About":
+          utils.scrollIntoView(".about")
           break
         default:
-          jumpTo(name)
+          utils.jumpTo(name)
       }
     },
     setLocale(name) {
@@ -116,7 +132,7 @@ export default {
 
     .header-logo {
       flex-grow: 1;
-    };
+    }
 
     .header-button {
       font-size: 24px;
@@ -163,18 +179,20 @@ export default {
   .header {
     position: absolute;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
     min-height: 110px;
-    padding: 0 1.25rem;
+    padding: 1.25rem;
+    flex-direction: column;
 
     .header-logo {
       flex-grow: 1;
+      margin-bottom: 1rem;
       img {
         width: 1.875rem;
         height: 2.25rem;
       }
-    };
+    }
 
     .header-button {
       font-size: 0.875rem;
@@ -217,7 +235,6 @@ export default {
 
         background-color: transparent;
         border: none;
-
       }
     }
 

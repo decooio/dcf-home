@@ -1,7 +1,9 @@
 {
   "header": {
-    "Grants": "Grants",
-    "Technology": "Technology",
+    "Initiatives": "Initiatives",
+    "Technologies": "Technologies",
+    "SupportProgram": "Support Program",
+    "About": "About",
     "Projects": "Projects",
     "En": "En",
     "Zh": "中文",
@@ -9,16 +11,16 @@
   },
   "home": {
     "title": "Decentralized Cloud Foundation",
-    "subtitle": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud infrastructure and applications of Web3.0"
+    "subtitle": "DCF (Decentralized Cloud Foundation) funds and incubates teams and projects, to build decentralized cloud technologies and applications of Web3.0."
   },
   "description": {
     "program": {
-      "title": "Crust Grants Program",
-      "content": "DCF has funded the decentralized storage project Crust Network and will extend the effort to the funding of development and research projects that drive user experience, business potential and technical innovation. Crust Grants Program is <span style='color: #2dacd1'>application-oriented</span>, currently it only supports <span style='color: #2dacd1'>software</span> development projects."
+      "title": "Decentralized Cloud Foundation Initiatives",
+      "content": "DCF has been funding the decentralized cloud storage project Crust Network since 2018, and will extend the effort to provide both financial and non? financial support to more projects and teams that drive technical innovation."
     },
     "stack": {
-      "title": "Decentralized Cloud Storage Stack",
-      "content": "You effectively enhance the value of the decentralized cloud by working on the following layers."
+      "title": "Decentralized Cloud Storage Technologies",
+      "content": "You effectively enhance the value of the decentralized cloud by working on the following layers of technology."
     }
   },
   "apply": {
