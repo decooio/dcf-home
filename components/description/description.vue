@@ -14,6 +14,7 @@
           :key="'dcf-card-' + index"
           :title="item.title"
           :options="item.options"
+          :on-click="item.onClick"
         />
       </div>
     </div>
@@ -29,14 +30,20 @@
 </template>
 
 <script>
+import utils from "../../utils"
 import DcfCard from "../DcfCard"
+
 export default {
   name: "Description",
+  utils,
   data() {
     return {
       cardsData: [
         {
           title: "Crust Key Technologies Support Program",
+          onClick: () => {
+            utils.scrollIntoView(".support-program")
+          },
           options: [
             "Supports core dev teams that focus on key technologies",
             "Supports open source projects in decentralized cloud field",
@@ -44,6 +51,9 @@ export default {
         },
         {
           title: "Crust Ecosystem Development Program",
+          onClick: () => {
+            utils.scrollIntoView(".dev-program")
+          },
           options: ["Crust Grants", "Crust Bounty", "Crust Ecosystem Growth"],
         },
         {

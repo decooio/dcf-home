@@ -1,37 +1,41 @@
 <template>
-  <div class="support-program">
+  <div class="support-program mobile">
     <div class="title">Crust Key Technologies Support Program</div>
-    <div class="world-map">
-      <div class="point p1">
-        <div class="v-line"></div>
-        <div class="card">
-          <div class="card-title">North America</div>
-          <div class="sub-title">DSM and chain modules</div>
-          <div class="team">—— UC Berkeley Team</div>
+    <div class="world-map-container">
+      <div class="world-map">
+        <div class="point p1">
+          <div class="v-line"></div>
+          <div class="card" @click="jumpTo('teamNorthAmerica')">
+            <div class="card-title">North America</div>
+            <div class="sub-title">DSM and chain modules</div>
+            <div class="team">—— Sediment-tech Team</div>
+          </div>
         </div>
-      </div>
-      <div class="point p2">
-        <div class="v-line"></div>
-        <div class="card">
-          <div class="card-title">Europe</div>
-          <div class="sub-title">Toolkit & API</div>
-          <div class="team">—— Socbay.io Team</div>
+        <div class="point p2">
+          <div class="v-line"></div>
+          <div class="card" @click="jumpTo('teamEurope')">
+            <div class="card-title">Europe</div>
+            <div class="sub-title">Toolkit & API</div>
+            <div class="team">—— Socbay.io Team</div>
+          </div>
         </div>
-      </div>
-      <div class="point p3">
-        <div class="v-line"></div>
-        <div class="card">
-          <div class="card-title">Shanghai</div>
-          <div class="sub-title">GPoS, Substrate and related technologies</div>
-          <div class="team">—— Clouderium Team</div>
+        <div class="point p3">
+          <div class="v-line"></div>
+          <div class="card" @click="jumpTo('teamShanghai')">
+            <div class="card-title">Shanghai</div>
+            <div class="sub-title">
+              GPoS, Substrate and related technologies
+            </div>
+            <div class="team">—— Clouderium Team</div>
+          </div>
         </div>
-      </div>
-      <div class="point p4">
-        <div class="v-line"></div>
-        <div class="card">
-          <div class="card-title">Singapore</div>
-          <div class="sub-title">MPoW and TEE related technologies</div>
-          <div class="team">—— SkyKiwi Team</div>
+        <div class="point p4">
+          <div class="v-line"></div>
+          <div class="card" @click="jumpTo('teamSingapore')">
+            <div class="card-title">Singapore</div>
+            <div class="sub-title">MPoW and TEE related technologies</div>
+            <div class="team">—— SkyKiwi Team</div>
+          </div>
         </div>
       </div>
     </div>
@@ -39,14 +43,17 @@
       <dcf-card2
         title="Crust Network"
         sub-title="a decentralized storage network of Web3.0 ecosystem"
+        @click="jumpTo('CrustNetwork')"
       />
       <dcf-card2
         title="Encrypted IPFS"
         sub-title="an encrypted storage layer of IPFS that supports customized encryptor"
+        @click="jumpTo('encryptedIPFS')"
       />
       <dcf-card2
         title="Decentralized Attestation Network"
         sub-title="a decentralized TEE enclave attestation service network built on blockchain"
+        @click="jumpTo('DAN')"
       />
     </div>
     <div class="apply-btn">
@@ -58,11 +65,15 @@
 </template>
 
 <script>
+import utils from "../utils"
 import DcfCard2 from "./DcfCard2"
 
 export default {
   name: "SupportProgram",
   components: { DcfCard2 },
+  methods: {
+    jumpTo: utils.jumpTo,
+  },
 }
 </script>
 
@@ -86,10 +97,17 @@ export default {
     line-height: 48px;
     font-weight: bold;
   }
+  .world-map-container {
+    overflow: auto;
+    width: 100%;
+    height: 900px;
+    display: flex;
+    justify-content: center;
+  }
   .world-map {
-    margin-top: 314px;
     position: relative;
     overflow: visible;
+    margin-top: 314px;
     height: 553px;
     width: 1390px;
     background: url("../assets/images/back-world.png") no-repeat bottom;
@@ -117,6 +135,7 @@ export default {
         display: flex;
         flex-direction: column;
         padding: 19px;
+        cursor: pointer;
         .card-title {
           font-size: 26px;
           font-weight: 500;
@@ -215,19 +234,113 @@ export default {
   }
 }
 @media (max-width: 600px) {
-  .support-program {
-    padding: 1rem !important;
-  }
-  .title {
-    font-size: 1.2rem !important;
-    width: unset !important;
-  }
-  .world-map {
-    transform: scale(0.5);
-  }
-  .cards {
-    width: 100% !important;
-    overflow: auto !important;
+  .mobile {
+    padding: 1rem;
+    background-size: 100% 7.5rem;
+    .title {
+      font-size: 1.2rem;
+      width: unset;
+    }
+    .world-map-container {
+      overflow: auto;
+      width: 100%;
+      height: 33.42rem;
+      display: flex;
+      justify-content: flex-start;
+    }
+    .world-map {
+      flex-shrink: 0;
+      margin-top: 9rem;
+      height: 14.44rem;
+      width: 36.29rem;
+      .point {
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 0.375rem;
+        .v-line {
+          width: 0.13rem;
+          height: 3.3rem;
+          top: -3.3rem;
+          left: 0.31rem;
+        }
+        .card {
+          border: 0.13rem solid #3f7e91;
+          width: 16.63rem;
+          padding: 0.75rem;
+          .card-title {
+            font-size: 1.13rem;
+          }
+          .sub-title {
+            font-size: 0.88rem;
+            margin-top: 0.25rem;
+          }
+          .team {
+            margin-top: 1rem;
+            align-self: flex-end;
+          }
+        }
+      }
+      .p1 {
+        left: 4.56rem;
+        top: 6.06rem;
+        .card {
+          top: -8.94rem;
+          left: -3.94rem;
+        }
+      }
+      .p2 {
+        left: 17.75rem;
+        top: 2.75rem;
+        .v-line {
+          height: 10rem !important;
+          top: 0.74rem !important;
+        }
+        .card {
+          top: 10rem;
+          left: -12rem;
+        }
+      }
+      .p3 {
+        left: 31rem;
+        top: 3.75rem;
+        .card {
+          top: -11.94rem;
+          left: -9.94rem;
+        }
+      }
+      .p4 {
+        left: 28.5rem;
+        top: 8rem;
+        .v-line {
+          top: 0.74rem !important;
+        }
+        .card {
+          top: 3.5rem !important;
+          left: -3rem;
+        }
+      }
+    }
+    .cards {
+      width: 100%;
+      flex-direction: column;
+      margin-top: 0;
+      padding: unset;
+    }
+    .apply-btn {
+      align-self: flex-start;
+      margin-right: unset;
+      width: 8.9rem;
+      height: 1.5rem;
+      font-size: 0.63rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.25rem;
+      padding: 0 0.5rem;
+      white-space: nowrap;
+      img {
+        width: 1.06rem;
+        height: 0.56rem;
+      }
+    }
   }
 }
 </style>
