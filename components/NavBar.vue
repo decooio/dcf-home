@@ -41,8 +41,8 @@
 </template>
 
 <script>
-import { MenuIcon as NavIcon } from "vue-feather-icons"
-import utils from "../utils"
+import { MenuIcon as NavIcon } from "vue-feather-icons";
+import utils from "../utils";
 
 export default {
   comments: { NavIcon },
@@ -62,10 +62,10 @@ export default {
           name: "SupportProgram",
           hasChild: false,
         },
-        {
-          name: "About",
-          hasChild: false,
-        },
+        // {
+        //   name: "About",
+        //   hasChild: false,
+        // },
         // {
         //   name: "Projects",
         //   hasChild: true,

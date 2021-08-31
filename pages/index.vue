@@ -5,16 +5,17 @@
     <application />
     <support-program />
     <dev-program />
-    <about />
+<!--    <about />-->
     <main-footer />
   </div>
 </template>
 <script>
-import VueScrollTo from "vue-scrollto"
-import SupportProgram from "../components/SupportProgram"
-import DevProgram from "../components/DevProgram"
-import About from "../components/About"
-import MainFooter from "../components/Footer"
+import VueScrollTo from "vue-scrollto";
+import SupportProgram from "../components/SupportProgram";
+import DevProgram from "../components/DevProgram";
+import About from "../components/About";
+import MainFooter from "../components/Footer";
+
 export default {
   components: { MainFooter, About, DevProgram, SupportProgram },
   mounted() {

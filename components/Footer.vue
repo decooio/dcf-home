@@ -35,7 +35,8 @@
 </template>
 
 <script>
-import utils from "../utils"
+import utils from "../utils";
+
 const TAB_MAP = {
   Initiatives: ".description",
   Technologies: ".application",
@@ -46,7 +47,8 @@ export default {
   name: "MainFooter",
   data() {
     return {
-      tabs: ["Initiatives", "Technologies", "Support Program", "About"],
+      // remove "About" temporary
+      tabs: ["Initiatives", "Technologies", "Support Program"],
       email: "hi@decloud.foundation",
       showCopied: false,
       lastTimer: null,
