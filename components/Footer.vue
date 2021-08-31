@@ -31,11 +31,13 @@
         Copyright Ⓒ Decentralised Cloud Foundation 2021 All Rights Reserved
       </div>
     </div>
+    <CookieAccept />
   </div>
 </template>
 
 <script>
 import utils from "../utils";
+import CookieAccept from "./CookieAccept";
 
 const TAB_MAP = {
   Initiatives: ".description",
@@ -45,6 +47,9 @@ const TAB_MAP = {
 }
 export default {
   name: "MainFooter",
+  components: {
+    CookieAccept,
+  },
   data() {
     return {
       // remove "About" temporary
@@ -80,6 +85,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   padding: 60px 0;
+  position: relative;
 
   .logo {
     width: 70px;

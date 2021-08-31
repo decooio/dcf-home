@@ -1,6 +1,9 @@
 <template>
   <div class="dev-program mobile">
-    <div class="title">Crust Ecosystem Development Program</div>
+    <div class="title">
+      Crust Ecosystem Development <br />
+      Program
+    </div>
     <div class="m-card">
       <div class="card-title">Crust Grants</div>
       <div class="sub-title">
@@ -61,7 +64,7 @@
 </template>
 
 <script>
-import utils from "../utils"
+import utils from "../utils";
 
 export default {
   name: "DevProgram",

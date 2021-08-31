@@ -34,7 +34,7 @@
           <div class="card" @click="jumpTo('teamSingapore')">
             <div class="card-title">Singapore</div>
             <div class="sub-title">MPoW and TEE related technologies</div>
-            <div class="team">—— SkyKiwi Team</div>
+            <div class="team">—— SkyeKiwi Team</div>
           </div>
         </div>
       </div>
@@ -65,8 +65,8 @@
 </template>
 
 <script>
-import utils from "../utils"
-import DcfCard2 from "./DcfCard2"
+import utils from "../utils";
+import DcfCard2 from "./DcfCard2";
 
 export default {
   name: "SupportProgram",
@@ -154,7 +154,7 @@ export default {
       }
     }
     .p1 {
-      left: 350px;
+      left: 190px;
       top: 193px;
       .card {
         top: -255px;

@@ -195,7 +195,6 @@ export default {
 @media (max-width: 600px) {
   .header {
     position: absolute;
-    display: flex;
     width: 100%;
     padding: 1.25rem;
     justify-content: space-between;

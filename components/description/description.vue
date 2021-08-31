@@ -30,12 +30,13 @@
 </template>
 
 <script>
-import utils from "../../utils"
-import DcfCard from "../DcfCard"
+import utils from "../../utils";
+import DcfCard from "../DcfCard";
 
 export default {
   name: "Description",
   utils,
+  components: { DcfCard },
   data() {
     return {
       cardsData: [
@@ -62,11 +63,13 @@ export default {
             "Facilitate Crust Council operation",
             "Organize Crust Council conferences and open documentation",
           ],
+          onClick: () => {
+            window.open("https://apps.crust.network/#/council", "__blank")
+          },
         },
       ],
     }
   },
-  components: { DcfCard },
 }
 </script>
 
@@ -104,9 +107,9 @@ export default {
         width: 100%;
         flex-direction: row;
         overflow: auto;
-        padding: 30px 20px;
+        padding: 30px 5px;
         align-self: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 20px 0;
       }
     }

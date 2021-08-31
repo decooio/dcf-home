@@ -55,7 +55,7 @@
       "title": "L1 <br> Strategy Layer",
       "strategy": {
         "title": "Strategies",
-        "storageManagement": "Storage Management",
+        "storageManagement": "Storage Order Management",
         "diskManagement": "Disk Management"
       }
     },
@@ -64,7 +64,8 @@
       "fileSystems": {
         "title": "File Systems",
         "IPFS": "IPFS",
-        "bitTorrent": "BitTorrent"
+        "bitTorrent": "BitTorrent",
+        "etc": "..."
       },
       "chainProtocols": {
         "title": "Chain Protocols",

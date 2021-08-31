@@ -44,7 +44,7 @@ export default {
   background: white;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.14);
   width: 347px;
-  height: 368px;
+  height: 400px;
   padding: 36px 30px;
 }
 .card-title {
