@@ -25,7 +25,7 @@ const outerDit = {
   DAN: "https://github.com/crustio/tee-alliance",
   CrustBounty: "https://gitcoin.co/crustio",
   CrustGrants: "https://github.com/crustio/Crust-Grants-Program",
-  RegisterSupport: "",
+  RegisterSupport: "https://airtable.com/shrS6lp8H8q7NsIiF",
   CrustTreasuryProposal:
     "https://wiki-maxwell.crust.network/docs/en/democracyGuide#21-treasury",
   ApplyCrustTips:
