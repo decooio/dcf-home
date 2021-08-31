@@ -91,6 +91,7 @@ export default {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  margin-top: -50px;
   .title {
     width: 1280px;
     font-size: 48px;
@@ -198,8 +199,7 @@ export default {
     padding: 67px 20px;
   }
   .apply-btn {
-    margin-right: calc(50% - 680px);
-    align-self: flex-end;
+    align-self: center;
     width: 336px;
     height: 58px;
     display: flex;
@@ -327,7 +327,7 @@ export default {
       padding: unset;
     }
     .apply-btn {
-      align-self: flex-start;
+      align-self: center;
       margin-right: unset;
       width: 8.9rem;
       height: 1.5rem;
