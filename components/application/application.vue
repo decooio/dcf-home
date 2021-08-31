@@ -242,11 +242,11 @@ export default {
               &:nth-child(2) {
 
                 :nth-child(1) {
-                  width: 400px
+                  width: 400px;
                 }
 
                 :nth-child(2) {
-                  width: 400px;
+                  width: 440px;
                 }
               }
 
