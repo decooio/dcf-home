@@ -18,7 +18,7 @@ const outerDit = {
   CrustNetwork: "https://crust.network",
   teamNorthAmerica:
     "https://www.linkedin.com/company/sediment-tech/?viewAsMember=true",
-  teamEurope: "",
+  teamEurope: "https://socbay.io",
   teamShanghai: "https://www.linkedin.com/company/clouderium",
   teamSingapore: "https://skye.kiwi/",
   encryptedIPFS: "https://github.com/crustio/encrypted-ipfs",
