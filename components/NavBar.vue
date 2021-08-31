@@ -30,7 +30,7 @@
 </template>
 
 <script>
-import utils from "../utils"
+import utils from "../utils";
 
 export default {
   data() {
@@ -49,10 +49,10 @@ export default {
           name: "SupportProgram",
           hasChild: false,
         },
-        {
-          name: "About",
-          hasChild: false,
-        },
+        // {
+        //   name: "About",
+        //   hasChild: false,
+        // },
         // {
         //   name: "Projects",
         //   hasChild: true,
