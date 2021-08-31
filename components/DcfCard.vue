@@ -1,5 +1,5 @@
 <template>
-  <div class="card-container">
+  <div :class="['card-container', onClick ? 'pointer' : '']" @click="click()">
     <div class="card-title">{{ title }}</div>
     <ul class="card-ul">
       <li v-for="(item, index) in options" :key="'card-option-' + index">
@@ -21,16 +21,30 @@ export default {
       type: Array,
       required: true,
     },
+    onClick: {
+      type: Function,
+      default: undefined,
+    },
+  },
+  methods: {
+    click() {
+      if (this.onClick) {
+        this.onClick()
+      }
+    },
   },
 }
 </script>
 
 <style lang="scss" scoped>
+.pointer {
+  cursor: pointer;
+}
 .card-container {
   background: white;
   box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.14);
   width: 347px;
-  height: 368px;
+  height: 400px;
   padding: 36px 30px;
 }
 .card-title {
@@ -53,7 +67,7 @@ export default {
 }
 @media (max-width: 600px) {
   .card-container {
-    width: calc(100vw - 2rem);
+    width: 100%;
     height: max-content;
     margin-top: 1rem;
   }

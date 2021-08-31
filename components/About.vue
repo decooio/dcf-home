@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="about mobile">
     <div class="title">Decentralized Cloud Foundation Leadership</div>
     <div class="leadership">
       <div
@@ -111,7 +111,7 @@ export default {
         height: 210px;
         border-radius: 105px;
         overflow: hidden;
-        object-fit: contain;
+        object-fit: cover;
         margin: 29px 0;
       }
       .leader-desc {
@@ -139,6 +139,54 @@ export default {
         font-weight: 400;
         color: #333333;
         line-height: 26px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    padding: 1.8rem 1.2rem;
+    .title {
+      width: 100%;
+      font-size: 1.13rem;
+      line-height: 1.56rem;
+      margin-bottom: 0.6rem;
+    }
+    .leadership {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      width: 100%;
+      align-items: flex-start;
+      padding: 0;
+      .leader-item {
+        width: 14rem;
+        margin: 0 3rem;
+        .avatar {
+          width: 12rem;
+          height: 12rem;
+          border-radius: 6rem;
+          margin: 1.5rem 0;
+        }
+        .leader-desc {
+          font-size: 0.88rem;
+          line-height: 1.25rem;
+        }
+        .split-line {
+          width: 100%;
+          height: 0.25rem;
+          margin-top: 1rem;
+          margin-bottom: 0.3rem;
+        }
+        .leader-name {
+          font-size: 1.5rem;
+          line-height: 2rem;
+        }
+        .leader-tag {
+          font-size: 1rem;
+          line-height: 1.38rem;
+        }
       }
     }
   }

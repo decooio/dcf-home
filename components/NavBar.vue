@@ -3,7 +3,6 @@
     <div class="header-logo">
       <img :src="require('~/assets/images/logo.png')" alt="" />
     </div>
-
     <template v-for="item in navList">
       <b-dropdown
         v-if="item.hasChild"
@@ -26,13 +25,27 @@
         {{ $t(`header.${item.name}`) }}
       </div>
     </template>
+
+    <b-dropdown>
+      <template v-slot:button-content>
+        <nav-icon size="1x" />
+      </template>
+      <b-dropdown-item
+        v-for="item in navList"
+        :key="'drop-head-' + item.name"
+        class="header-button"
+        @click="jump(item.name)"
+      />
+    </b-dropdown>
   </div>
 </template>
 
 <script>
-import utils from "../utils"
+import { MenuIcon as NavIcon } from "vue-feather-icons";
+import utils from "../utils";
 
 export default {
+  comments: { NavIcon },
   data() {
     return {
       activeNav: "home",
@@ -49,10 +62,10 @@ export default {
           name: "SupportProgram",
           hasChild: false,
         },
-        {
-          name: "About",
-          hasChild: false,
-        },
+        // {
+        //   name: "About",
+        //   hasChild: false,
+        // },
         // {
         //   name: "Projects",
         //   hasChild: true,
@@ -153,6 +166,10 @@ export default {
       }
     }
 
+    .header-nav {
+      display: none;
+    }
+
     /deep/ .b-dropdown {
       button {
         @extend .header-button;
@@ -178,12 +195,9 @@ export default {
 @media (max-width: 600px) {
   .header {
     position: absolute;
-    display: flex;
-    align-items: flex-start;
     width: 100%;
-    min-height: 110px;
     padding: 1.25rem;
-    flex-direction: column;
+    justify-content: space-between;
 
     .header-logo {
       flex-grow: 1;
@@ -211,6 +225,10 @@ export default {
       &:focus {
         color: white;
       }
+    }
+
+    .header-nav {
+      display: block;
     }
 
     /deep/ .b-dropdown {

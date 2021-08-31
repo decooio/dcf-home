@@ -1,6 +1,9 @@
 <template>
-  <div class="dev-program">
-    <div class="title">Crust Ecosystem Development Program</div>
+  <div class="dev-program mobile">
+    <div class="title">
+      Crust Ecosystem Development <br />
+      Program
+    </div>
     <div class="m-card">
       <div class="card-title">Crust Grants</div>
       <div class="sub-title">
@@ -10,12 +13,12 @@
         range of users. The program offers funding up to $30,000 for each
         recipient.
       </div>
-      <div class="btn-base">
+      <div class="btn-base" @click="jumpTo('CrustGrants')">
         <span>Apply Now</span>
         <img src="../assets/svgs/arrow-2.svg" />
       </div>
     </div>
-    <div class="m-card">
+    <div class="m-card" @click="jumpTo('CrustBounty')">
       <div class="card-title">Crust Bounty</div>
       <div class="sub-title">
         Crust Bounty program provides waves of bounties on Gitcoin, mainly on
@@ -34,7 +37,7 @@
         projects, and provides a wide range of support including technical,
         marketing, and investment resources.
       </div>
-      <div class="btn-base btn-2">
+      <div class="btn-base btn-2" @click="jumpTo('RegisterSupport')">
         <span>Register and Get Support</span>
         <img src="../assets/svgs/arrow-2.svg" />
       </div>
@@ -42,7 +45,7 @@
         Crust Ecosystem Growth program also facilitates developers to apply for
         operational cost via Crust Treasury Proposal.
       </div>
-      <div class="btn-base btn-2">
+      <div class="btn-base btn-2" @click="jumpTo('CrustTreasuryProposal')">
         <span>Crust Treasury Proposal</span>
         <img src="../assets/svgs/arrow-2.svg" />
       </div>
@@ -52,7 +55,7 @@
         organizing meet-ups. The program will facilitates contributors to apply
         for Crust Tips.
       </div>
-      <div class="btn-base btn-2">
+      <div class="btn-base btn-2" @click="jumpTo('ApplyCrustTips')">
         <span>Apply for Crust Tips</span>
         <img src="../assets/svgs/arrow-2.svg" />
       </div>
@@ -61,8 +64,13 @@
 </template>
 
 <script>
+import utils from "../utils";
+
 export default {
   name: "DevProgram",
+  methods: {
+    jumpTo: utils.jumpTo,
+  },
 }
 </script>
 
@@ -134,6 +142,59 @@ export default {
     }
     .btn-2 {
       width: 346px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    padding: 1.8rem 1.2rem;
+    background-size: 100% 10.5rem;
+
+    .title {
+      width: 100%;
+      font-size: 1.13rem;
+      line-height: 1.56rem;
+      font-weight: bold;
+      margin-bottom: 0.6rem;
+      color: white;
+    }
+
+    .m-card {
+      width: 100%;
+      margin-top: 1.25rem;
+      padding: 1.13rem 1.5rem;
+
+      .card-title {
+        font-size: 1.13rem;
+        font-weight: 600;
+        line-height: 1.56rem;
+      }
+
+      .sub-title {
+        font-size: 0.88rem;
+        font-weight: 400;
+        line-height: 1.25rem;
+        margin-top: 0.88rem;
+      }
+
+      .btn-base {
+        margin-top: 1.13rem;
+        width: 10rem;
+        height: 1.5rem;
+        display: flex;
+        font-size: 0.88rem;
+        padding: 0 0.6rem;
+
+        img {
+          width: 1rem;
+          height: 0.5rem;
+        }
+      }
+
+      .btn-2 {
+        width: 14rem;
+      }
     }
   }
 }

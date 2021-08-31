@@ -14,6 +14,7 @@
           :key="'dcf-card-' + index"
           :title="item.title"
           :options="item.options"
+          :on-click="item.onClick"
         />
       </div>
     </div>
@@ -29,14 +30,21 @@
 </template>
 
 <script>
-import DcfCard from "../DcfCard"
+import utils from "../../utils";
+import DcfCard from "../DcfCard";
+
 export default {
   name: "Description",
+  utils,
+  components: { DcfCard },
   data() {
     return {
       cardsData: [
         {
           title: "Crust Key Technologies Support Program",
+          onClick: () => {
+            utils.scrollIntoView(".support-program")
+          },
           options: [
             "Supports core dev teams that focus on key technologies",
             "Supports open source projects in decentralized cloud field",
@@ -44,6 +52,9 @@ export default {
         },
         {
           title: "Crust Ecosystem Development Program",
+          onClick: () => {
+            utils.scrollIntoView(".dev-program")
+          },
           options: ["Crust Grants", "Crust Bounty", "Crust Ecosystem Growth"],
         },
         {
@@ -52,11 +63,13 @@ export default {
             "Facilitate Crust Council operation",
             "Organize Crust Council conferences and open documentation",
           ],
+          onClick: () => {
+            window.open("https://apps.crust.network/#/council", "__blank")
+          },
         },
       ],
     }
   },
-  components: { DcfCard },
 }
 </script>
 
@@ -94,9 +107,9 @@ export default {
         width: 100%;
         flex-direction: row;
         overflow: auto;
-        padding: 30px 20px;
+        padding: 30px 5px;
         align-self: center;
-        justify-content: space-around;
+        justify-content: space-between;
         margin: 20px 0;
       }
     }

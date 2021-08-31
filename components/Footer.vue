@@ -1,5 +1,5 @@
 <template>
-  <div class="main-footer">
+  <div class="main-footer mobile">
     <div class="logo" />
     <div class="tabs">
       <div
@@ -31,11 +31,14 @@
         Copyright Ⓒ Decentralised Cloud Foundation 2021 All Rights Reserved
       </div>
     </div>
+    <CookieAccept />
   </div>
 </template>
 
 <script>
-import utils from "../utils"
+import utils from "../utils";
+import CookieAccept from "./CookieAccept";
+
 const TAB_MAP = {
   Initiatives: ".description",
   Technologies: ".application",
@@ -44,9 +47,13 @@ const TAB_MAP = {
 }
 export default {
   name: "MainFooter",
+  components: {
+    CookieAccept,
+  },
   data() {
     return {
-      tabs: ["Initiatives", "Technologies", "Support Program", "About"],
+      // remove "About" temporary
+      tabs: ["Initiatives", "Technologies", "Support Program"],
       email: "hi@decloud.foundation",
       showCopied: false,
       lastTimer: null,
@@ -78,6 +85,7 @@ export default {
   flex-direction: row;
   justify-content: center;
   padding: 60px 0;
+  position: relative;
 
   .logo {
     width: 70px;
@@ -156,6 +164,57 @@ export default {
       color: white;
       line-height: 30px;
       margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .mobile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 10rem;
+    padding: 1.2rem;
+    .logo {
+      display: none;
+    }
+    .tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      margin: 0;
+      .m-btn {
+        font-size: 0.63rem;
+        font-weight: 500;
+        line-height: 0.75rem;
+        margin-right: 1rem;
+      }
+    }
+    .contact {
+      .title {
+        font-size: 0.75rem;
+        line-height: 1rem;
+        margin-top: 1.2rem;
+      }
+      .input-email {
+        width: 12rem;
+        height: 1.88rem;
+        padding-left: 0.75rem;
+        font-size: 0.63rem;
+        margin-top: 0.6rem;
+      }
+      .copy-btn {
+        margin-top: 0.6rem;
+        padding: 0 1.44rem;
+        line-height: 1.88rem;
+        height: 1.88rem;
+        font-size: 0.63rem;
+        margin-left: 0.38rem;
+      }
+      .copyright {
+        font-size: 0.5rem;
+        line-height: 0.69rem;
+      }
     }
   }
 }

@@ -41,8 +41,9 @@
 </template>
 
 <script>
-import CustomButton from "~/components/CustomButton.vue"
-import utils from "~/utils"
+import CustomButton from "~/components/CustomButton.vue";
+import utils from "~/utils";
+
 export default {
   name: "Application",
   components: {
@@ -124,6 +125,9 @@ export default {
                 },
                 {
                   name: "bitTorrent",
+                },
+                {
+                  name: "etc",
                 },
               ],
             },
@@ -238,11 +242,11 @@ export default {
               &:nth-child(2) {
 
                 :nth-child(1) {
-                  width: 437px
+                  width: 400px
                 }
 
                 :nth-child(2) {
-                  width: 493px;
+                  width: 400px;
                 }
               }
 
