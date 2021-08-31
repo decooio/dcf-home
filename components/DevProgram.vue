@@ -1,8 +1,7 @@
 <template>
   <div class="dev-program mobile">
     <div class="title">
-      Crust Ecosystem Development <br />
-      Program
+      Crust Ecosystem Development Program
     </div>
     <div class="m-card">
       <div class="card-title">Crust Grants</div>
@@ -32,7 +31,7 @@
     </div>
     <div class="m-card">
       <div class="card-title">Crust Ecosystem Growth</div>
-      <div class="sub-title">
+      <div class="sub-title mt-4">
         Crust Ecosystem Growth program collects information of ecosystem
         projects, and provides a wide range of support including technical,
         marketing, and investment resources.

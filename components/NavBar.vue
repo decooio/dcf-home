@@ -3,30 +3,32 @@
     <div class="header-logo">
       <img :src="require('~/assets/images/logo.png')" alt="" />
     </div>
-    <template v-for="item in navList">
-      <b-dropdown
-        v-if="item.hasChild"
-        :key="item.name"
-        :text="item.name === 'Locales' ? locale : $t(`header.${item.name}`)"
-        right
-      >
-        <template v-for="child in item.children">
-          <b-dropdown-item :key="child" href="#" @click="jump(child)">
-            {{ $t(`header.${child}`) }}</b-dropdown-item
-          >
-        </template>
-      </b-dropdown>
-      <div
-        v-else
-        :key="'head-' + item.name"
-        class="header-button"
-        @click="jump(item.name)"
-      >
-        {{ $t(`header.${item.name}`) }}
-      </div>
-    </template>
+    <div class="nav-web">
+      <template v-for="item in navList">
+        <b-dropdown
+          v-if="item.hasChild"
+          :key="item.name"
+          :text="item.name === 'Locales' ? locale : $t(`header.${item.name}`)"
+          right
+        >
+          <template v-for="child in item.children">
+            <b-dropdown-item :key="child" href="#" @click="jump(child)">
+              {{ $t(`header.${child}`) }}</b-dropdown-item
+            >
+          </template>
+        </b-dropdown>
+        <div
+          v-else
+          :key="'head-' + item.name"
+          class="header-button"
+          @click="jump(item.name)"
+        >
+          {{ $t(`header.${item.name}`) }}
+        </div>
+      </template>
+    </div>
 
-    <b-dropdown>
+    <b-dropdown class="nav-mobile" right>
       <template v-slot:button-content>
         <nav-icon size="1x" />
       </template>
@@ -35,7 +37,9 @@
         :key="'drop-head-' + item.name"
         class="header-button"
         @click="jump(item.name)"
-      />
+      >
+        {{ $t(`header.${item.name}`) }}
+      </b-dropdown-item>
     </b-dropdown>
   </div>
 </template>
@@ -45,7 +49,7 @@ import { MenuIcon as NavIcon } from "vue-feather-icons";
 import utils from "../utils";
 
 export default {
-  comments: { NavIcon },
+  components: { NavIcon },
   data() {
     return {
       activeNav: "home",
@@ -141,10 +145,17 @@ export default {
     width: 100%;
     min-width: 1440px;
     min-height: 110px;
-    padding: 0 55px 0 85px;
+    padding: 0 0 0 85px;
 
     .header-logo {
       flex-grow: 1;
+    }
+    .nav-web {
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-mobile {
+      display: none;
     }
 
     .header-button {
@@ -194,6 +205,7 @@ export default {
 
 @media (max-width: 600px) {
   .header {
+    display: flex;
     position: absolute;
     width: 100%;
     padding: 1.25rem;
@@ -207,7 +219,12 @@ export default {
         height: 2.25rem;
       }
     }
-
+    .nav-web {
+      display: none;
+    }
+    .nav-mobile {
+      display: flex;
+    }
     .header-button {
       font-size: 0.875rem;
       color: white;
