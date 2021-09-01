@@ -1,9 +1,8 @@
-FROM node:current-alpine3.10
+FROM nginx:stable-alpine
 
-ADD . /opt/web
+WORKDIR /usr/share/nginx/html
 
-WORKDIR /opt/web
-RUN yarn install
-RUN yarn build
+COPY docker/nginx.conf /etc/nginx/nginx.conf
+COPY ./dist /usr/share/nginx/html
 
-CMD yarn start
+EXPOSE 80
