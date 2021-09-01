@@ -1,5 +1,3 @@
 node_modules
 .nuxt
 .git
-.npm
-Dockerfile
