@@ -1,8 +1,6 @@
 <template>
   <div class="dev-program mobile">
-    <div class="title">
-      Crust Ecosystem Development Program
-    </div>
+    <div class="title">Crust Ecosystem Development Program</div>
     <div class="m-card">
       <div class="card-title">Crust Grants</div>
       <div class="sub-title">
@@ -29,7 +27,7 @@
         <img src="../assets/svgs/arrow-2.svg" />
       </div>
     </div>
-    <div class="m-card">
+    <div id="growth" class="m-card">
       <div class="card-title">Crust Ecosystem Growth</div>
       <div class="sub-title mt-4">
         Crust Ecosystem Growth program collects information of ecosystem
