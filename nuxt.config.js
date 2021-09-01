@@ -1,5 +1,4 @@
-
-let target = "http://192.168.50.7:18081"
+const target = "http://192.168.50.7:18081"
 
 export default {
   /*
@@ -33,8 +32,7 @@ export default {
       {
         hid: "description",
         name: "description",
-        content:
-          "",
+        content: "",
       },
     ],
     link: [
@@ -77,6 +75,7 @@ export default {
     "~/plugins/i18n.js",
     "~/plugins/clipboard2.js",
     "~/plugins/vue-awesome-swiper.js",
+    "~/plugins/v-tooltip.js",
     { src: "~/plugins/vue-pdf.js", ssr: false },
   ],
   router: {
@@ -130,19 +129,19 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    proxy: true
+    proxy: true,
   },
   proxy: {
-    '/api': {
+    "/api": {
       target,
       pathRewrite: {
-        '^/api': '/api'
-      }
+        "^/api": "/api",
+      },
     },
-    '/cityjson': {
-      target: 'http://pv.sohu.com/',
-      pathRewrite: { '^/cityjson': '/cityjson' }
-    }
+    "/cityjson": {
+      target: "http://pv.sohu.com/",
+      pathRewrite: { "^/cityjson": "/cityjson" },
+    },
   },
   /*
    ** Build configuration

@@ -17,7 +17,7 @@
 
 <script>
 import CustomButton from "~/components/CustomButton.vue"
-import jumpTo from "~/utils"
+import utils from "~/utils"
 export default {
   name: "Apply",
   components: {
@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     onClick() {
-      jumpTo("apply")
+      utils.jumpTo("apply")
     },
   },
 }

@@ -41,8 +41,9 @@
 </template>
 
 <script>
-import CustomButton from "~/components/CustomButton.vue"
-import jumpTo from "~/utils"
+import CustomButton from "~/components/CustomButton.vue";
+import utils from "~/utils";
+
 export default {
   name: "Application",
   components: {
@@ -125,6 +126,9 @@ export default {
                 {
                   name: "bitTorrent",
                 },
+                {
+                  name: "etc",
+                },
               ],
             },
             {
@@ -148,7 +152,7 @@ export default {
   },
   methods: {
     onClick() {
-      jumpTo("eligible")
+      utils.jumpTo("eligible")
     },
   },
 }
@@ -157,10 +161,11 @@ export default {
 <style lang="scss" scoped>
 @media (min-width: 600px) {
   .application {
+    padding-top: 340px;
+    margin-top: -340px;
+    padding-bottom: 84px;
     background: url("~/assets/images/back-3.png");
     width: 100%;
-    margin: auto;
-    height: 1460px;
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: 100%;
@@ -237,11 +242,11 @@ export default {
               &:nth-child(2) {
 
                 :nth-child(1) {
-                  width: 437px
+                  width: 400px;
                 }
 
                 :nth-child(2) {
-                  width: 493px;
+                  width: 440px;
                 }
               }
 
@@ -483,8 +488,6 @@ export default {
               }
             }
           }
-
-
         }
 
         &:nth-child(1) {

@@ -1,12 +1,12 @@
 <template>
   <div class="custom-button" @click="onClick">
     <div class="custom-button-text">{{ text }}</div>
-    <div class="custom-button-arrow" v-html="arrow"></div>
+    <img width="32" height="16" src="../assets/svgs/arrow-2.svg" />
   </div>
 </template>
 
 <script>
-import arrow from "~/assets/svgs/arrow.svg?raw"
+import arrow from "~/assets/svgs/arrow-2.svg?raw"
 export default {
   name: "CustomButton",
   components: {},
@@ -29,16 +29,15 @@ export default {
 <style lang="scss" scoped>
 @media (min-width: 600px) {
   .custom-button {
-    height: 50px;
+    height: 53px;
     display: flex;
     align-items: center;
-    width: fit-content;
-    line-height: 50px;
+    width: 343px;
     background: white;
     border: 1px solid rgba(31, 31, 31, 0.6);
-    padding: 0 43px 0 43px;
-    font-size: 24px;
-    font-weight: bold;
+    padding: 0 20px;
+    font-size: 20px;
+    justify-content: space-between;
     cursor: pointer;
     color: $color-black;
     fill: $color-black;

@@ -3,51 +3,78 @@
     <div class="header-logo">
       <img :src="require('~/assets/images/logo.png')" alt="" />
     </div>
+    <div class="nav-web">
+      <template v-for="item in navList">
+        <b-dropdown
+          v-if="item.hasChild"
+          :key="item.name"
+          :text="item.name === 'Locales' ? locale : $t(`header.${item.name}`)"
+          right
+        >
+          <template v-for="child in item.children">
+            <b-dropdown-item :key="child" href="#" @click="jump(child)">
+              {{ $t(`header.${child}`) }}</b-dropdown-item
+            >
+          </template>
+        </b-dropdown>
+        <div
+          v-else
+          :key="'head-' + item.name"
+          class="header-button"
+          @click="jump(item.name)"
+        >
+          {{ $t(`header.${item.name}`) }}
+        </div>
+      </template>
+    </div>
 
-    <template v-for="item in navList">
-      <b-dropdown
-        v-if="item.hasChild"
-        :key="item.name"
-        :text="item.name === 'Locales' ? locale : $t(`header.${item.name}`)"
-        right
-      >
-        <template v-for="child in item.children">
-          <b-dropdown-item :key="child" href="#" @click="jump(child)">
-            {{ $t(`header.${child}`) }}</b-dropdown-item
-          >
-        </template>
-      </b-dropdown>
-      <div class="header-button"
-        v-else
+    <b-dropdown class="nav-mobile" right>
+      <template v-slot:button-content>
+        <nav-icon size="1x" />
+      </template>
+      <b-dropdown-item
+        v-for="item in navList"
+        :key="'drop-head-' + item.name"
+        class="header-button"
         @click="jump(item.name)"
-      >{{ $t(`header.${item.name}`) }}</div>
-    </template>
-
+      >
+        {{ $t(`header.${item.name}`) }}
+      </b-dropdown-item>
+    </b-dropdown>
   </div>
 </template>
 
 <script>
-import VueScrollTo from "vue-scrollto"
-import jumpTo from "../utils"
+import { MenuIcon as NavIcon } from "vue-feather-icons";
+import utils from "../utils";
 
 export default {
+  components: { NavIcon },
   data() {
     return {
       activeNav: "home",
       navList: [
         {
-          name: "Grants",
+          name: "Initiatives",
           hasChild: false,
         },
         {
-          name: "Technology",
+          name: "Technologies",
           hasChild: false,
         },
         {
-          name: "Projects",
-          hasChild: true,
-          children: ["CrustNetwork"],
+          name: "SupportProgram",
+          hasChild: false,
         },
+        // {
+        //   name: "About",
+        //   hasChild: false,
+        // },
+        // {
+        //   name: "Projects",
+        //   hasChild: true,
+        //   children: ["CrustNetwork"],
+        // },
 
         // {
         //   name: "Locales",
@@ -83,14 +110,20 @@ export default {
         case "En":
           this.setLocale("en")
           break
-        case "Grants":
-          VueScrollTo.scrollTo(document.querySelector(".description"))
+        case "Initiatives":
+          utils.scrollIntoView(".description")
           break
-        case "Technology":
-          VueScrollTo.scrollTo(document.querySelector(".application"))
+        case "Technologies":
+          utils.scrollIntoView(".application")
+          break
+        case "SupportProgram":
+          utils.scrollIntoView(".support-program")
+          break
+        case "About":
+          utils.scrollIntoView(".about")
           break
         default:
-          jumpTo(name)
+          utils.jumpTo(name)
       }
     },
     setLocale(name) {
@@ -112,11 +145,18 @@ export default {
     width: 100%;
     min-width: 1440px;
     min-height: 110px;
-    padding: 0 55px 0 85px;
+    padding: 0 0 0 85px;
 
     .header-logo {
       flex-grow: 1;
-    };
+    }
+    .nav-web {
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-mobile {
+      display: none;
+    }
 
     .header-button {
       font-size: 24px;
@@ -135,6 +175,10 @@ export default {
       &:focus {
         color: white;
       }
+    }
+
+    .header-nav {
+      display: none;
     }
 
     /deep/ .b-dropdown {
@@ -161,21 +205,26 @@ export default {
 
 @media (max-width: 600px) {
   .header {
-    position: absolute;
     display: flex;
-    align-items: center;
+    position: absolute;
     width: 100%;
-    min-height: 110px;
-    padding: 0 1.25rem;
+    padding: 1.25rem;
+    justify-content: space-between;
 
     .header-logo {
       flex-grow: 1;
+      margin-bottom: 1rem;
       img {
         width: 1.875rem;
         height: 2.25rem;
       }
-    };
-
+    }
+    .nav-web {
+      display: none;
+    }
+    .nav-mobile {
+      display: flex;
+    }
     .header-button {
       font-size: 0.875rem;
       color: white;
@@ -193,6 +242,10 @@ export default {
       &:focus {
         color: white;
       }
+    }
+
+    .header-nav {
+      display: block;
     }
 
     /deep/ .b-dropdown {
@@ -217,7 +270,6 @@ export default {
 
         background-color: transparent;
         border: none;
-
       }
     }
 
